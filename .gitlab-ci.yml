@@ -12,4 +12,4 @@ build:
     - "cd $CI_PROJECT_DIR"
     - "envsubst < Dockerfile.template > Dockerfile"
     - "docker build -t hello-world ."
-    - "dokcer tag hello-world i.am.jds2001.org:5000/hello-world:$CI_JOB_ID"
+    - "docker tag hello-world i.am.jds2001.org:5000/hello-world:$CI_JOB_ID"
