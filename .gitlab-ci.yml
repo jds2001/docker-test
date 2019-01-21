@@ -5,6 +5,6 @@ build:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_DRVIER: overlay2
   services:
-    docker:dind
+    - docker:dind
   script:
     - "docker info"
