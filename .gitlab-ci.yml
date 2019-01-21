@@ -7,9 +7,8 @@ build:
   services:
     - docker:dind
   before_script:
-    - "echo >(true)"
-    - "exit 1"
     - "yum -y install gettext docker"
   script:
     - "cd $CI_PROJECT_DIR"
-    - "docker build -f >(cat Dockerfile | envsubst) -t hello-world ."
+    - "envsubst < Dockerfile.template > Dockerfile"
+    - "docker build -t hello-world ."
