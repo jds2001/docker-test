@@ -5,7 +5,10 @@ build:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_DRVIER: overlay2
   services:
-    - docker:dind
+    - name: docker:dind
+      entrypoint:
+        - "/usr/local/bin/dockerd-entrypoint.sh"
+        - "--insecure-registry i.am.jds2001.org:5000"
   before_script:
     - "yum -y install gettext docker-client"
   script:
