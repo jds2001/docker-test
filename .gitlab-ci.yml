@@ -8,4 +8,4 @@ build:
     - docker:dind
   script:
     - "cd $CI_PROJECT_DIR"
-    - "docker build -f <(envsubst Dockerfile) -t hello-world .'
+    - "docker build -f <(envsubst Dockerfile) -t hello-world ."
