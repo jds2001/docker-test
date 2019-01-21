@@ -1,6 +1,6 @@
 build:
   stage: build
-  image: docker:stable
+  image: centos:7
   variables:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_DRVIER: overlay2
