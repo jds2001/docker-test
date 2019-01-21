@@ -7,4 +7,5 @@ build:
   services:
     - docker:dind
   script:
-    - "docker info"
+    - "cd $CI_PROJECT_DIR"
+    - "docker build -f <(envsubst Dockerfile) -t hello-world .'
