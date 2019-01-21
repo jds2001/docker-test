@@ -7,7 +7,7 @@ build:
   services:
     - docker:dind
   before_script:
-    - "yum -y install gettext docker"
+    - "yum -y install gettext docker-client"
   script:
     - "cd $CI_PROJECT_DIR"
     - "envsubst < Dockerfile.template > Dockerfile"
