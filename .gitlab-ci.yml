@@ -13,3 +13,7 @@ build:
     - "envsubst < Dockerfile.template > Dockerfile"
     - "docker build -t hello-world ."
     - "docker tag hello-world i.am.jds2001.org:5000/hello-world:$CI_JOB_ID"
+    - "docker tag hello-world i.am.jds2001.org:5000/hello-world:latest"
+    - "docker push i.am.jds2001.org:5000/hello-world:$CI_JOB_ID"
+    - "docker push i.am.jds2001.org:5000/hello-world:latest"
+
