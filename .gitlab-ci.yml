@@ -6,6 +6,8 @@ build:
     DOCKER_DRVIER: overlay2
   services:
     - docker:dind
+  before_script:
+    - "yum install gettext docker"
   script:
     - "cd $CI_PROJECT_DIR"
     - "docker build -f <(envsubst Dockerfile) -t hello-world ."
