@@ -1,4 +1,4 @@
 FROM centos:7
-RUN yum install httpd ; yum clean all ; mkdir /build
+RUN yum -y install httpd ; yum clean all ; mkdir /build
 COPY container-files /build
 ENTRYPOINT /build/hello.sh
