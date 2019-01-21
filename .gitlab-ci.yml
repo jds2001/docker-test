@@ -8,7 +8,8 @@ build:
     - name: docker:dind
       entrypoint:
         - "/usr/local/bin/dockerd-entrypoint.sh"
-        - "--insecure-registry i.am.jds2001.org:5000"
+        - "--insecure-registry"
+        - "i.am.jds2001.org:5000"
   before_script:
     - "yum -y install gettext docker-client"
   script:
